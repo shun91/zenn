@@ -3,7 +3,7 @@ title: "Go言語を触ってみたのでメモ"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Go", "メモ"]
-published: false
+published: true
 ---
 
 普段はフロントエンドを開発している筆者が Go 言語を触ってみたので気になったところとか残します。
@@ -20,9 +20,7 @@ https://zenn.dev/y16ra/articles/251c3770365689
 
 https://go-tour-jp.appspot.com/welcome/1
 
-以下、「Packages, variables, and functions.」の章をやってみて気になったところのメモ。
-
-https://go-tour-jp.appspot.com/basics/1
+以下、やってみて気になったところのメモ。
 
 ## `:=` はどういう意味があるんだ・・？
 
@@ -35,12 +33,6 @@ https://go-tour-jp.appspot.com/basics/10
 `uint` は非負の整数を表す型らしい。
 
 `complex64` は複素数を表す型らしい。
-
----
-
-ここからは、「Flow control statements: for, if, else, switch and defer」の章をやってみて気になったところのメモ。
-
-https://go-tour-jp.appspot.com/flowcontrol/1
 
 ## If with a short statement
 
@@ -66,6 +58,17 @@ func pow(x, n, lim float64) float64 {
 条件分岐などがあってもリソースの開放処理を忘れないように、先に開放処理を書くことができる。
 
 https://tech.yappli.io/entry/understanding-defer-in-go
+
+## ポインタ
+
+ポインタを介することでミュータブルに変数を扱えるようになると理解した。（通常はイミュータブル）
+
+メモリを効率良く使いたいようなケースで使うのが良さそうだけど、基本的には可読性下がるので使うべきではなさそう。
+
+# さいごに
+
+一旦ここまで。  
+やる気があったら「Methods and interfaces」「Concurrency」をやる。
 
 # Appendix
 
