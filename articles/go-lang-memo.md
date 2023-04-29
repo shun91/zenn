@@ -65,15 +65,34 @@ https://tech.yappli.io/entry/understanding-defer-in-go
 
 メモリを効率良く使いたいようなケースで使うのが良さそうだけど、基本的には可読性下がるので使うべきではなさそう。
 
-# さいごに
+## `interface{}`
 
-一旦ここまで。  
-やる気があったら「Methods and interfaces」「Concurrency」をやる。
+TypeScript における`any`と同じものっぽい。
+
+https://go-tour-jp.appspot.com/methods/14
+
+## goroutine
+
+関数実行時に `go` と付けるだけで並列実行してくれるっぽい。
+
+```go
+go hogeFunc(foo, bar)
+```
+
+値をやり取りするためのチャネル `<-` という仕組みや、排他制御のための `sync.Mutex` という仕組みもある。
+
+Go といえば goroutine の名前をよく聞くことがあったけど、これはたしかに便利そう。
+
+https://go-tour-jp.appspot.com/concurrency/1
+
+## panic
+
+いわゆるランタイムエラー（実行時例外）のことっぽい。
+
+https://qiita.com/nayuneko/items/9534858156dfd50b43fb
 
 # Appendix
 
 https://qiita.com/tenntenn/items/0e33a4959250d1a55045
-
-https://zenn.dev/y16ra/articles/251c3770365689
 
 https://go-tour-jp.appspot.com/welcome/1
