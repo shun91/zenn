@@ -2,14 +2,14 @@
 title: "バックエンドエンジニアのためのVue.js/Nuxt.js入門"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
-published: false
+topics: ["vue", "vue3", "nuxtjs", "frontend", "javascript"]
+published: true
 ---
 
 JS のフレームワークの 1 つである Vue.js・Nuxt.js の基本的な内容を、バックエンドエンジニアの方向けに説明します。
 
 :::message
-5 年ぐらい前に書いたものを最新状況に合わせて加筆修正した記事となりますが、古い内容などが含まれていたらごめんなさい mm
+5 年ぐらい前に書いたものを最新状況に合わせて加筆修正した記事となります。また、Nuxt2 → Nuxt3 に移行する際に必要な知識を補うために、一部古い内容が含まれています mm（Vuex など）
 :::
 
 # Vue.js とは
