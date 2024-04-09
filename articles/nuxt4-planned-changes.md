@@ -6,6 +6,12 @@ topics: []
 published: false
 ---
 
+# ⚠ 注意
+
+- この記事は作成中です
+- 2024/04 上旬時点での情報です
+- 内容には誤りを含む可能性があります。参照したソースを記載しているので、合わせて確認してください
+
 # ソース
 
 https://nuxt.com/blog/looking-forward-2024
@@ -106,7 +112,7 @@ https://github.com/nuxt/nuxt/issues/25339
 
 https://github.com/nuxt/nuxt/issues/25344
 
-# 【破壊的変更】Plugin の読み込みをデフォルトで並列化
+# 【Breaking Change】Plugin の読み込みをデフォルトで並列化
 
 Nuxt3 では、Plugin の読み込みはデフォルトでは直列に行われます。[`parallel` というオプションに `true` を渡す](https://nuxt.com/docs/guide/directory-structure/plugins#parallel-plugins)ことで、これを並列化することができます。
 
@@ -128,9 +134,29 @@ https://github.com/nuxt/nuxt/issues/25713
 
 https://github.com/nuxt/nuxt/issues/25789
 
-#
+# 【Breaking Change】`clearNuxtData`の関数名と仕様の変更
+
+[`clearNuxtData`](https://nuxt.com/docs/api/utils/clear-nuxt-data) を呼び出すと、`data` の値が `undefined` になります。  
+これを、`default` プロパティがセットされている場合は、その値になるように変更されるようです。
+
+合わせて、関数名が実態に合うように `clearNuxtData` から `resetNuxtData` に変更されるようです。
+
+また、[`clear`](https://nuxt.com/docs/getting-started/data-fetching#clear)関数を呼び出した際の挙動や、関数名も同様に変更されるようです。
+
+```ts
+const { data } = await useFetch(
+  "https://jsonplaceholder.typicode.com/comments",
+  { default: () => [], key: "comments" }
+);
+clearNuxtData("comments");
+console.log(data); // Nuxt3 では undefined が、Nuxt4 では [] が出力される
+```
 
 https://github.com/nuxt/nuxt/issues/26269
+
+#
+
+https://github.com/nuxt/nuxt/issues/26295
 
 ---
 
