@@ -154,11 +154,23 @@ console.log(data); // Nuxt3 では undefined が、Nuxt4 では [] が出力さ�
 
 https://github.com/nuxt/nuxt/issues/26269
 
-#
+# 【Breaking Change】Data fetching composables の error のデフォルト値変更
+
+[Data fetching composables](https://nuxt.com/docs/getting-started/data-fetching) ( [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch), [`useAsyncData`](https://nuxt.com/docs/api/composables/use-async-data) ) の返り値である `data` と `error` はそれぞれデフォルト値が以下のように異なっています。
+
+- `data`: `undefined`（または `default` プロパティで指定した値）
+- `error`: `null`
+
+一貫性を保つために、これを `undefined` に統一するようです。
 
 https://github.com/nuxt/nuxt/issues/26295
 
----
+# 【Breaking Change】Data fetching composables の data を shallow ref object に変更
+
+[Data fetching composables](https://nuxt.com/docs/getting-started/data-fetching) ( [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch), [`useAsyncData`](https://nuxt.com/docs/api/composables/use-async-data) ) の返り値である `data` はデフォルトで deep ref object です。これは `deep` プロパティのデフォルト値が `true` であるためです。  
+このデフォルト値が `false` (shallow ref object) に変更されるようです。これにより、パフォーマンスの向上が見込まれています。
+
+https://github.com/nuxt/nuxt/issues/26443
 
 # 【Breaking Change】ディレクトリ構造の改善
 
@@ -198,3 +210,18 @@ nuxt.config.ts
 現在は以下の issue で熱い議論？が繰り広げられているようです。（ディレクトリ名など）
 
 https://github.com/nuxt/nuxt/issues/26444
+
+# `NuxtLink` の軽量化
+
+Nuxt におけるリンクコンポーネントである`NuxtLink`は、多くのユースケースをカバーするように多機能化された影響で、サイズが肥大化しています。これを軽量化することが提案されています。
+
+https://github.com/nuxt/nuxt/issues/26445
+
+# `process.server`, `process.client` の非推奨化
+
+サーバー or クライアントサイドでのみ実行したい処理がある場合などに使用される `process.server`, `process.client` が非推奨となるようです。  
+移行先は [`import.meta.server`, `import.meta.client`](https://nuxt.com/docs/api/advanced/import-meta#runtime-app-properties) となります。
+
+また、Nuxt5 で `process.server`, `process.client` は完全に廃止される計画もあるようです。
+
+https://github.com/nuxt/nuxt/issues/26474
