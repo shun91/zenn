@@ -3,7 +3,7 @@ title: "Nuxt4 で予定されている変更点まとめ（2024/04現在）"
 emoji: "⚠️"
 type: "tech"
 topics: ["nuxtjs", "nuxt3", "vue", "frontend"]
-published: false
+published: true
 ---
 
 先日、Nuxt の公式から以下のようなブログポストがありました。
