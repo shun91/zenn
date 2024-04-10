@@ -38,10 +38,6 @@ https://github.com/orgs/nuxt/projects/8/views/4
   - [Data fetching composables の `data` を shallow ref object に変更](#data-fetching-composables-の-data-を-shallow-ref-object-に変更)
   - [`process.server`, `process.client` の非推奨化](#process.server%2C-process.client-の非推奨化)
 
-一番大きな変更は、何と言っても [ディレクトリ構造の改善](#ディレクトリ構造の改善) です。大抵の Nuxt プロジェクトは影響を受けるものと思われます。
-
-その他は小さな変更が中心ですが、利用していたら影響を受けそうなものは以下です。
-
 # 変更点一覧
 
 ## Data fetching composables から `params` の削除
