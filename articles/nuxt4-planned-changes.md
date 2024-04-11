@@ -60,6 +60,13 @@ const { data } = await useFetch(
 
 https://github.com/nuxt/nuxt/issues/25208
 
+:::message
+2024/04/12 追記
+
+Data fetching composables が内部で使用している ofetch の issue において、`params` を廃止するのではなく「非推奨化する」可能性を示唆する言及がありました。  
+https://github.com/unjs/ofetch/issues/378
+:::
+
 ## Data fetching composables の返り値から `pending` の削除
 
 [Data fetching composables](https://nuxt.com/docs/getting-started/data-fetching) ( [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch), [`useAsyncData`](https://nuxt.com/docs/api/composables/use-async-data), [`$fetch`](https://nuxt.com/docs/api/utils/dollarfetch) ) は、データが fetch 中かどうかを表すものを 2 つ提供しています。
