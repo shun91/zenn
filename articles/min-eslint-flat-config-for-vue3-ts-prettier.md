@@ -133,6 +133,10 @@ https://typescript-eslint.io/troubleshooting/#i-am-running-into-errors-when-pars
 
 これは従来通り eslint-config-prettier を追加するだけです。
 
+```bash
+yarn add -D eslint-config-prettier
+```
+
 ```diff js:eslint.config.js
  import pluginJs from "@eslint/js";
  import tseslint from "typescript-eslint";
