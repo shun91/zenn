@@ -1,5 +1,5 @@
 ---
-title: "Vue3 + TypeScript + Prittier に対応した ESLint Flat Config の最小構成"
+title: "Vue3 + TypeScript + Prettier に対応した ESLint Flat Config の最小構成"
 emoji: "🛠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["eslint", "vue", "vue3", "typescript", "prettier"]
@@ -129,7 +129,7 @@ https://typescript-eslint.io/troubleshooting/#i-am-running-into-errors-when-pars
 
 これで Parsing error が解消します。
 
-### Pritter 対応
+### Prettier 対応
 
 これは従来通り eslint-config-prettier を追加するだけです。
 
