@@ -6,7 +6,11 @@ topics: ["eslint", "vue", "vue3", "typescript", "prettier"]
 published: true
 ---
 
+タイトルの構成を Flat Config で実現しようと思ったら、若干ハマったので雑に書きました。
+
 ## TL; DR
+
+別途必要なライブラリはインストールしてください。
 
 ```js:eslint.config.js
 import globals from "globals";
