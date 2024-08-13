@@ -6,6 +6,10 @@ topics: ["eslint", "vue", "vue3", "typescript", "prettier"]
 published: true
 ---
 
+:::message
+「[筆者の Linter に対するスタンス](#追記：筆者の-linter-に対するスタンス)」など一部加筆修正しました。[詳細な差分はこちら](https://github.com/shun91/zenn/commit/8501e7a25e34ba30d011fb15a9730eec8e6f5443)を確認してください。
+:::
+
 タイトルの構成を Flat Config で実現しようと思ったら、若干ハマったので雑に書きました。
 
 ## TL; DR
