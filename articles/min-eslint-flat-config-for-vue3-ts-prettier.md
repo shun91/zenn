@@ -21,7 +21,7 @@ import vueParser from "vue-eslint-parser";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs["flat/essential"],
@@ -205,28 +205,47 @@ https://eslint.vuejs.org/user-guide/#bundle-configurations-eslint-config-js
 
 ### eslint.config.js も型が効くようにしたい
 
-FlatConfig は JavaScript ファイルですが、以下のように JSDoc を使用して型チェックすることが可能です。
+FlatConfig は JavaScript ファイルですが、以下のように [typescript-eslint が提供する config というヘルパー関数](https://typescript-eslint.io/packages/typescript-eslint#config)を使用して型チェックすることが可能です。
 
 ```diff js:eslint.config.js
-+/** @type { import("eslint").Linter.FlatConfig[] } */
- export default [
+- export default [
++ export default tseslint.config(
    // 省略
- ]
+- ]
++ )
 ```
 
-ただし、プラグインによっては型エラーになるようなので、`@ts-expect-error` を記述しておく必要がありそうでした。
-型チェックは効かなくなりますが、補完の恩恵は受けられるので、それだけでも十分価値がありそうです。
+ただし、プラグインによっては型エラーになるようなので、そのような場合は `@ts-expect-error` を記述しておくとよいです。
+型チェックは効かなくなりますが補完の恩恵は受けられるので、それだけでも十分価値があります。
 
 ```diff js:eslint.config.js
- /** @type { import("eslint").Linter.FlatConfig[] } */
-+// @ts-expect-error
- export default [
+ export default tseslint.config(
    // 省略
- ]
+
++  // @ts-expect-error エラーが出るため
+   ...pluginVue.configs["flat/essential"],
+
+   // 省略
+ )
 ```
 
 ### Nuxt に対応したい
 
 以下の記事が参考になると思います。
+セットアップ方法が 3 つ紹介されていますが、個人的には「`@nuxt/eslint-config`のバージョンアップのみ行う」がよさそうに思っています（ちゃんと試せてはいません mm）
 
 https://zenn.dev/comm_vue_nuxt/articles/setup-nuxt-eslint
+
+## 追記：筆者の Linter に対するスタンス
+
+**Linter そのものの運用保守を最低限で済ませたい**
+Linter の設定や運用に時間をかけすぎるのは本質的ではないと考えています。開発の効率を上げるために導入している Linter が、逆に手間を増やす原因になることは避けたいところです。
+
+**基本は公式が提供しているルールセットに従う**
+Linter の設定は、公式のルールセットを可能な限り採用する方針です。独自のルールをカスタマイズしすぎると、その保守が複雑になり、コストが増大するからです。公式のルールセットは、多くの優秀な開発者たちによって設計されており、通常はそれで十分と考えています。プロジェクトの特性に合わせてルールを細かく調整するよりも、公式のルールを活用する方がコストに見合った成果が得られると感じています。
+
+上記のスタンスなので、従来の eslintrc から Flat Config に移行する際も、これまで設定していたルールを厳密に再現することよりも、ルールが多少変わったとしても設定をシンプルに保つことを優先したい派です。
+なので、これまで設定していた eslintrc は破棄して、新たに Flat Config を設定し直すのがいいと考えています。
+ちなみに、これまで設定していたルールを厳密に再現したい場合は以下の記事がおすすめです。
+
+https://zenn.dev/cybozu_frontend/articles/introduce-eslint-config-compat
