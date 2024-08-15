@@ -3,7 +3,7 @@ title: "Nuxt3以降におけるコンポーネントのディレクトリ設計�
 emoji: "📁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nuxtjs", "nuxt3", "vue", "frontend", "設計"]
-published: true
+published: false
 ---
 
 :::message
