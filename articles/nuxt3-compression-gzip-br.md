@@ -141,8 +141,8 @@ Nuxt 3 では、gzip や brotli によるコンテンツやアセットの圧縮
 
 また、実際に圧縮配信が動作するデモアプリも用意したので、参考にしてみてください。
 
-https://nuxt-compression-sample.vercel.app
-https://github.com/shun91/nuxt-compression-sample
+https://shun91-nuxt-examples.vercel.app/compression
+https://github.com/shun91/nuxt-examples
 
 ## 参考資料
 
