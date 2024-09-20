@@ -139,6 +139,11 @@ https://github.com/unjs/h3/blob/2d941d3cfb1dddf543d48abe23d13488c88c7432/src/uti
 
 Nuxt 3 では、gzip や brotli によるコンテンツやアセットの圧縮を比較的簡単に導入できます。CDN やリバースプロキシでの圧縮ができない場合には、ぜひ試してみてください。
 
+また、実際に圧縮配信が動作するデモアプリも用意したので、参考にしてみてください。
+
+https://nuxt-compression-sample.vercel.app
+https://github.com/shun91/nuxt-compression-sample
+
 ## 参考資料
 
 - [CodeDredd/h3-compression： Adds compression to h3 requests (brotli, gzip, deflate)](https://github.com/CodeDredd/h3-compression)
