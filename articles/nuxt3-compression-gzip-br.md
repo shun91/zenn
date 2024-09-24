@@ -3,7 +3,7 @@ title: "Nuxt3でコンテンツやアセットを圧縮配信する（gzip/brotl
 emoji: "🗜️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nuxt3", "nuxtjs", "performance", "圧縮", "gzip"]
-published: false
+published: true
 ---
 
 Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツやアセットを圧縮配信する方法を調べたので、まとめてみました。ここでは、3 つのケースに分けて、具体的な設定方法を説明します。
