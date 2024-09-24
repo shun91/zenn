@@ -6,7 +6,7 @@ topics: ["nuxt3", "nuxtjs", "performance", "圧縮", "gzip"]
 published: false
 ---
 
-Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツやアセットを圧縮配信する方法を調べたので、まとめてみました。ここでは、サーバーサイドレンダリング（SSR）のレスポンス、アセット、API プロキシの 3 つのケースに分けて、具体的な設定方法を説明します。
+Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツやアセットを圧縮配信する方法を調べたので、まとめてみました。ここでは、3 つのケースに分けて、具体的な設定方法を説明します。
 
 ## 前提
 
@@ -14,11 +14,11 @@ Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツ
 
 ## 圧縮の方法：3 種類
 
-どのコンテンツを圧縮するかによって方法が異なります。以下では、SSR レスポンスの圧縮、静的アセットの圧縮、API プロキシでの圧縮レスポンス処理に分けて説明します。
+何を圧縮するかによって方法が異なります。以下では、SSR レスポンスの圧縮、静的アセットの圧縮、API プロキシでの圧縮レスポンス処理に分けて説明します。
 
 ### SSR レスポンスの圧縮
 
-SSR で生成された HTML などのレスポンスを gzip で圧縮する場合、Nitro プラグインを使用します。このプラグインは、`accept-encoding` ヘッダーに `gzip` が含まれているかどうかを確認し、必要であればレスポンスを gzip で圧縮します。
+SSR で生成された HTML などのレスポンスを gzip で圧縮する場合、Nitro プラグインを使用します。以下のプラグイン `compression.ts` は、`accept-encoding` ヘッダーに `gzip` が含まれていたらレスポンスを gzip で圧縮します。
 
 ```ts:server/plugins/compression.ts
 export default defineNitroPlugin((nitro) => {
@@ -42,11 +42,11 @@ export default defineNitroPlugin((nitro) => {
 
 ![ブラウザのキャプチャ](/images/nuxt3-compression-gzip-br/ssr-compression-result.png)
 
-ちなみに、上記ソースコード内で使用している[`render:response`](https://nitro.unjs.io/guide/plugins#renderer-response)は、SSR でのページレンダリング時に呼び出されるフックです。
+ちなみに、上記ソースコード内で使用している[`render:response`](https://nitro.unjs.io/guide/plugins#renderer-response)は、SSR でのページレンダリング時に呼び出される Nitro フックです。
 
 ### アセットの圧縮
 
-次に、JavaScript や CSS などの静的アセットを圧縮する方法です。これを行うには、`nuxt.config.ts`に以下の設定を追加します。これにより、ビルド時にアセットが自動で gzip や brotli 形式で圧縮されます。
+次に、JavaScript や CSS などの静的アセットを圧縮する方法です。これを行うには、`nuxt.config.ts`に以下の設定を追加します。これにより、`nuxt build` コマンドによるビルド時にアセットが自動で gzip や brotli 形式で圧縮されます。
 
 ```ts:nuxt.config.ts
 export default defineNuxtConfig({
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
 
 最後に、API プロキシを経由して圧縮レスポンスを保持する場合の処理です。API プロキシを使って外部 API にリクエストを行い、そのレスポンスがすでに圧縮されている場合、プロキシでレスポンスの圧縮が保持されるようにする設定が必要です。これを実現するために、`http-proxy-middleware` を使います。
 
-以下は、プロキシの設定例です。
+以下は、プロキシの設定例です。Nitro のミドルウェアとして設定します。
 
 ```ts:server/middleware/proxy.ts
 import { createProxyMiddleware } from 'http-proxy-middleware';
@@ -123,8 +123,7 @@ https://github.com/unjs/h3/blob/2d941d3cfb1dddf543d48abe23d13488c88c7432/src/uti
 
 ## 圧縮の効果：70~90%のサイズ削減
 
-圧縮処理をすることで、テキストベースのデータ（HTML、CSS、JavaScript など）は 70%から 90%のサイズ削減が期待できます。  
-例えば、100KB の HTML ファイルが gzip 圧縮されると、10KB から 30KB 程度にまで縮小されることがあります。
+以下の表のように、圧縮処理をすることで、テキストベースのデータ（HTML、CSS、JavaScript など）は 70%から 90%のサイズ削減が期待できます。
 
 ![alt text](/images/nuxt3-compression-gzip-br/effects-of-compression.png)
 [テキストベースのアセットのエンコードと転送サイズを最適化する  |  Articles  |  web.dev](https://web.dev/articles/optimizing-content-efficiency-optimize-encoding-and-transfer?hl=ja)より引用
