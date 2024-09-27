@@ -6,7 +6,7 @@ topics: ["nuxt3", "nuxtjs", "performance", "圧縮", "gzip"]
 published: true
 ---
 
-Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツやアセットを圧縮配信する方法を調べたので、まとめてみました。ここでは、3 つのケースに分けて、具体的な設定方法を説明します。
+Nuxt 3 アプリケーションで、gzip（ジー・ジップ）や brotli（ブロトリ）を使ってコンテンツやアセットを圧縮配信する方法を調べたので、まとめてみました。ここでは、3 つのケースに分けて、具体的な設定方法を説明します。
 
 ## 前提
 
@@ -25,7 +25,7 @@ https://github.com/shun91/nuxt-examples
 
 ### SSR レスポンスの圧縮
 
-SSR で生成された HTML などのレスポンスを gzip で圧縮する場合、Nitro プラグインを使用します。以下のプラグイン `compression.ts` は、`accept-encoding` ヘッダーに `gzip` が含まれていたらレスポンスを gzip で圧縮します。
+SSR で生成された HTML などのレスポンスを gzip で圧縮する場合、Nitro（ナイトロ）プラグインを使用します。以下のプラグイン `compression.ts` は、`accept-encoding` ヘッダーに `gzip` が含まれていたらレスポンスを gzip で圧縮します。
 
 ```ts:server/plugins/compression.ts
 export default defineNitroPlugin((nitro) => {
