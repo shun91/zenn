@@ -3,7 +3,7 @@ title: "Promise.allで非同期処理を高速化して表示速度改善"
 emoji: "⏳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["javascript", "promise", "performance", "typescript", "非同期処理"]
-published: false
+published: true
 ---
 
 ## 概要
@@ -44,7 +44,8 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 実際に動作するデモも用意してみました 👇
 
-https://www.typescriptlang.org/ja/play/?#code/MYewdgzgLgBAZgUysAFgQQA4EsCMMC8MAFAJQEB8AUDPEqkQEQpRQYQBcA9JwCYCuAWwEBPAFYRwAOlADOfCAgBOEAPwAbLAKxR8ABgYlJUFAjBEiisvnIxFk8eFIkA3JUqhIsRMnTYATATEVlQ03vRMLGxcvIIiDmDSILIYINCqGlo6+obGpuaWFLb2EmYkLm4e0LQ+mFgAzIGkFNTV4cysHNz8QmIlibIAjnwgUAjpmtp6BkYmZhbBRfFOrpQAhhDCYMDwfFtQWOAwCopYq2oAYnQoTQDeLZWwimN4hKsA7qvarb64pK40D1sYwCrw+XzCPz8f3u4CqTwgDVBny8V1qdWhNCeUD4ijAMAA2vCcAAaIEQPyk+F1AC6rgAvm51pttnBdsB9ocMKtFGc1AgLldbjDPASiZTgeKEdTAu9kTAAAqKJJYBSSXlEfEtUKo7A4UjErXfWpQkgGmjamrYdGmlrU8qYpA4vGE56Silkmn0xkbLY7PYHPECT6lGB3AGw2DQblQAAqmgQAEkwABlJRYMaBDBKOAgRRBrYISRgEBvDEwWVfY6nAU+MuAhAADwQwDjAkTKbTGcIWcUObzqwLRZLTQAtEcoNHW+3UycxitwyKo4pY-Gk-Lubz+Zns7n88BC8XS-by2DYFyeWo+TX6Mf602W6uwOuL1ft73dwP90OjzAx0uV22a4bpe-LzjAlQgHykhqCAADmRA3DAjbNlOSYzumECkshD6AU+wGvnS5QMpQQZYKUrhAA
+https://shun91-nuxt-examples.vercel.app/promise-all
+@[card](https://github.com/shun91/nuxt-examples/blob/main/pages/promise-all.vue)
 
 ## 気をつけることは？
 
