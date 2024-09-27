@@ -12,6 +12,13 @@ Nuxt 3 アプリケーションで、gzip や brotli を使ってコンテンツ
 
 通常、コンテンツやアセットの圧縮は CDN やリバースプロキシ（例：Cloudflare や NGINX など）で行うことが一般的です。しかし特定のケースでは、アプリケーション側での圧縮が必要になることがあります。ここでは、そういった場合に活用できる方法を紹介します。
 
+## 動作デモ
+
+実際に圧縮配信が動作するデモアプリも用意したので、動かしながらこの記事を読むことで理解が深まると思います。
+
+https://shun91-nuxt-examples.vercel.app/compression
+https://github.com/shun91/nuxt-examples
+
 ## 圧縮の方法：3 種類
 
 何を圧縮するかによって方法が異なります。以下では、SSR レスポンスの圧縮、静的アセットの圧縮、API プロキシでの圧縮レスポンス処理に分けて説明します。
@@ -137,11 +144,6 @@ https://github.com/unjs/h3/blob/2d941d3cfb1dddf543d48abe23d13488c88c7432/src/uti
 ## まとめ
 
 Nuxt 3 では、gzip や brotli によるコンテンツやアセットの圧縮を比較的簡単に導入できます。CDN やリバースプロキシでの圧縮ができない場合には、ぜひ試してみてください。
-
-また、実際に圧縮配信が動作するデモアプリも用意したので、参考にしてみてください。
-
-https://shun91-nuxt-examples.vercel.app/compression
-https://github.com/shun91/nuxt-examples
 
 ## 参考資料
 
