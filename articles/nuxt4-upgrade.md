@@ -3,7 +3,7 @@ title: "Nuxt4アップグレードガイドの内容を整理してみた"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nuxtjs", "nuxt4", "vue", "typescript", "migration"]
-published: false
+published: true
 ---
 
 ## はじめに
