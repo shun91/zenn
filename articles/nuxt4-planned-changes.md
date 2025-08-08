@@ -6,6 +6,16 @@ topics: ["nuxtjs", "nuxt3", "vue", "frontend"]
 published: true
 ---
 
+:::message
+
+**2025/08/08 追記**
+
+Nuxt4 がリリースされたので、公式ガイドのどこを重点的に読めばよいかを整理した記事を書きました！
+
+@[card](https://zenn.dev/shun91/articles/nuxt4-upgrade)
+
+:::
+
 先日、Nuxt の公式から以下のようなブログポストがありました。
 
 https://nuxt.com/blog/looking-forward-2024
@@ -174,7 +184,7 @@ https://github.com/nuxt/nuxt/issues/25789
 ```ts
 const { data } = await useFetch(
   "https://jsonplaceholder.typicode.com/comments",
-  { default: () => [], key: "comments" }
+  { default: () => [], key: "comments" },
 );
 clearNuxtData("comments");
 console.log(data); // Nuxt3 では undefined が、Nuxt4 では [] が出力される
