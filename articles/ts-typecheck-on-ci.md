@@ -2,7 +2,7 @@
 title: "Claude Code使ってるのにCIで型チェック忘れてないですか？"
 emoji: "🚦"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["typescript", "ci", "frontend", "react", "vue"]
+topics: ["claudecode", "typescript", "ci", "frontend"]
 published: true
 ---
 
