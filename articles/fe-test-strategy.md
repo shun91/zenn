@@ -2,7 +2,7 @@
 title: "フロントエンドのテスト方針はプロダクトの状況に応じて定めるべきという話"
 emoji: "🧪"
 type: "tech"
-topics: ["frontend", "testing", "test", "e2e", "結合テスト"]
+topics: ["frontend", "testing", "test", "e2e", "zennfes2025free"]
 published: false
 ---
 
