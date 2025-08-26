@@ -3,7 +3,7 @@ title: "フロントエンドのテスト方針はプロダクトの状況に応
 emoji: "🧪"
 type: "tech"
 topics: ["frontend", "testing", "test", "e2e", "zennfes2025free"]
-published: false
+published: true
 ---
 
 ## 概要
