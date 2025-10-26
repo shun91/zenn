@@ -12,6 +12,11 @@ AI による簡単な概要も記載しています。
 
 随時更新予定なので、資料の情報提供、間違いの指摘など歓迎です。
 
+:::message
+更新履歴はコミットログをご確認ください。
+https://github.com/shun91/zenn/commits/main/articles/vue-fes-japan-2025.md
+:::
+
 ## キーノート
 
 資料は現時点で見つけられず
