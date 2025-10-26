@@ -2,7 +2,7 @@
 title: "Vue Fes Japan 2025 登壇資料まとめ"
 emoji: "😸"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["vue", "nuxtjs", "vite", "vue3"]
+topics: ["vue", "nuxtjs", "vite", "vue3", "frontend"]
 published: true
 ---
 
