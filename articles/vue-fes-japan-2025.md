@@ -146,7 +146,7 @@ CLI／Node-API／WASM(WASI) 等の配布形態から、Rust 製ツールが動�
 
 https://speakerdeck.com/naokihaba/nuxt-4-no-singleton-data-fetching-layer-de-he-gabian-warunoka
 
-`useAsyncData` の共有など、Nuxt 4 の Data Fetching 層の改善点を紹介。
+同じキーでの `ref` インスタンスの共有など、Nuxt 3.17 以降で導入されたデータフェッチングシステムの改善点を紹介。
 
 ## アウトプットから始める OSS コントリビューション 〜eslint-plugin-vue の場合〜
 
