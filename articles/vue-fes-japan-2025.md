@@ -113,7 +113,9 @@ Nuxt Typed Router × Pinia Colada で型安全・快適な非同期処理を実�
 
 ## Vue.js でつくる実験映像
 
-資料は現時点で見つけられず
+https://baku89.com/ja/vuefes2025
+
+Vue.js を使って自作のモーショングラフィックス・UI ライブラリ・コマ撮りアプリを開発した経験をもとに、創作フローでの GUI 開発の役割と、表現とツール開発が交差する実践例を紹介
 
 ## New Vue：サーバーサイドで動く WebAssembly/WASI プラットフォーム
 
