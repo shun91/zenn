@@ -87,7 +87,9 @@ https://yamanoku.net/vuefes-japan-2025/slide/
 
 ## Inside Vitest: テストフレームワークアーキテクチャの詳細解説
 
-資料は現時点で見つけられず
+https://hiroshi-talks.vercel.app/2025-10-25
+
+Vitest の内部構造を分解し、Vite との連携によって高速かつ柔軟なテスト実行を実現する仕組みを解説。
 
 ## Vue のバリデーション、結局どれを選べばいい？ ― 自作バリデーションの限界と、脱却までの道のり ―
 
