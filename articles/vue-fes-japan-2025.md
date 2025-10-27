@@ -63,7 +63,13 @@ PB 級のイベントデータをリアルタイム解析・活用する基盤�
 
 ## フレームワークを超えて：次の 10 年のウェブを築く
 
-資料は現時点で見つけられず
+:::message
+※別の登壇資料ですが、内容がほぼ同一とのことで掲載します。Vue Fes の登壇資料を発見次第差し替えます。
+:::
+
+https://rfihabsudkpoqozp.public.blob.vercel-storage.com/slides/2025-09-20-wts-beyond-framework.pdf
+
+フレームワークの枠を超えて持続的な価値を生むための、変化に強い Web アプリ設計の原則と実践を紹介。
 
 ## OXC という OSS への貢献と、その振り返り
 
