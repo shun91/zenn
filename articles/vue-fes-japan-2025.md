@@ -105,7 +105,9 @@ https://speakerdeck.com/neginasu/which-vue-validation-library-should-we-really-u
 
 ## rstore とローカルファーストなストア構築の課題
 
-資料は現時点で見つけられず
+https://slides.akryum.dev/2025-10-rstore-vue-fes/
+
+ローカルファーストなデータ管理戦略を背景に、rstore が Pinia とどう異なり、オフライン同期／データフェデレーションといった拡張性をどのように実現しているかを解説。
 
 ## Vue で 3D を楽しむ
 
