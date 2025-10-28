@@ -109,7 +109,9 @@ https://speakerdeck.com/neginasu/which-vue-validation-library-should-we-really-u
 
 ## Vue で 3D を楽しむ
 
-資料は現時点で見つけられず
+https://talk-2025-10-25-vue-fes-japan.vercel.app
+
+Vue.js を用いて 3D グラフィックス・インタラクションを開発するための基本から応用まで、Three.js などのライブラリとの組み合わせと実践的な手法を紹介。
 
 ## 最高の DX - Nuxt Typed Router と Pinia Colada で実現する次世代 Vue/Nuxt 開発
 
