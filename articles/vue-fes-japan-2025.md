@@ -205,7 +205,9 @@ https://speakerdeck.com/yut0naga1_fa/react-nativenaranu-vue-native-gashi-xian-su
 
 ## オーディオアプリケーションを Web でつくる
 
-資料は現時点で見つけられず
+https://building-audio-apps-with-js.vercel.app/1
+
+Web Audio API や WASM を活用して、リアルタイム音響処理／UI 制御を備えた Web ベースのオーディオアプリケーション開発の実践的アーキテクチャを紹介。
 
 ## Introducing Vite DevTools
 
