@@ -133,7 +133,9 @@ Vue.js を使って自作のモーショングラフィックス・UI ライブ�
 
 ## Vue 3.6 時代のリアクティビティ最前線 〜Vapor/alien-signals の実践とパフォーマンス最適化〜
 
-資料は現時点で見つけられず
+https://speakerdeck.com/hiranuma/alien-signals-noshi-jian-topahuomansuzui-shi-hua
+
+Vue 3.6 で導入される「Vapor Mode」と新リアクティビティシステム「alien-signals」によるメモリ削減・高速化を中心に、既存プロジェクト移行時の落とし穴やベストプラクティスを解説
 
 ## AI 駆動で進める依存ライブラリ更新 ─ Vue プロジェクトの品質向上と開発スピード改善の実践録
 
